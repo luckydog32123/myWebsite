@@ -1,0 +1,12 @@
+/* 第二个板块 */
+
+/* 鼠标图片 */
+.retro .circle-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+    background-color: lightgrey;
+    border: 3px solid #333;
+    border-top-color: #CCCCCC;
+    border-left-color: #CCCCCC;
+}

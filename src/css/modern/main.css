@@ -1,0 +1,81 @@
+/* 页面初始化 */
+
+/* 内外边距归零 隐藏光标 */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    cursor: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 页面内容选中背景颜色 */
+::selection {
+    background-color: yellowgreen;
+}
+
+
+/* 
+—————— 鼠标样式 ——————
+*/
+/* 鼠标黑色圆点 */
+.mousePoint {
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    border-radius: 50%;
+    /* 脱离文档流  初始固定在显示区域左上角 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /* 设置鼠标事件穿透  否则元素会挡住鼠标导致无法触发hover效果 */
+    pointer-events: none;
+}
+
+.mousePoint.bigDot {
+    height: 28px;
+    width: 28px;
+    background-color: yellowgreen;
+    transition: all 0.15s linear;
+}
+
+/* 鼠标外圈  用canvas绘制 */
+/* 画布铺满浏览器显示区域 */
+canvas[resize] {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* 脱离文档流 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+
+/* 
+—————— 内容结构 ——————
+*/
+.container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+/* 跟随页面滚动显示 交叉观察器 */
+.shows {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.showing {
+    opacity: 1;
+}

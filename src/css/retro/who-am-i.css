@@ -1,0 +1,80 @@
+/* 第一个板块 */
+
+/* 
+—————— 第一部分 导航栏 ——————
+*/
+/* 左侧文字 */
+@font-face {
+    font-family: 'Impact';
+    src: url('../../font/Impact.ttf');
+}
+
+.retro .who-am-i-nav-title {
+    font-family: 'Impact';
+    background: linear-gradient(#6900cc, #cb00cc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(0.9, 1.65) rotate(-3deg) skewY(-3deg) translateY(16px) translateZ(0);
+}
+
+.retro .who-am-i-nav-title>span {
+    background: inherit;
+    background-clip: inherit;
+    -webkit-background-clip: inherit;
+    z-index: 1;
+}
+
+.retro .who-am-i-nav-title::before {
+    content: '我是谁';
+    position: absolute;
+    text-shadow: 0.094em 0.063em #adadff;
+    z-index: -1;
+}
+
+/* 右侧 按钮 */
+.retro .slider-bar {
+    background-color: gainsboro;
+}
+
+
+/* 
+—————— 第二部分 文字 ——————
+*/
+.retro .who-am-i-text-more {
+    color: blue;
+    text-decoration: underline;
+    background-color: lightgrey;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    border: 3px solid #333;
+    border-top-color: #CCCCCC;
+    border-left-color: #CCCCCC;
+}
+
+/* 文字 隐藏下划线和箭头 */
+.retro .who-am-i-text-more::before,
+.retro .who-am-i-text-more::after {
+    display: none;
+}
+
+
+/* 
+—————— 第三部分 图片 ——————
+*/
+/* 图片阴影 */
+.retro .who-am-i-imgs-box {
+    box-shadow: 10px 10px 10px grey;
+}
+
+/* 取消过渡动画 */
+.retro .who-am-i-imgs-box>img:last-child {
+    transition: none;
+}
+
+/* 隐藏右上角旋转图标 */
+.retro .who-am-i-imgs-rotate {
+    display: none;
+}

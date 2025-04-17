@@ -1,0 +1,114 @@
+/* 第二个板块 */
+.about-me {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* 
+—————— 标题 ——————
+*/
+.about-me-title {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
+/* 
+—————— 内容 ——————
+*/
+.works-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.one-work {
+    /* 自动计数变量 */
+    counter-increment: workNum;
+    position: relative;
+    display: flex;
+}
+
+/* 文字 */
+.one-work-text-box {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+/* 文字 标题 */
+.one-work-title {
+    font-size: 5vw;
+    font-weight: 300;
+    width: fit-content;
+    transition: opacity 0.4s;
+}
+
+/* 文字 标题 编号 */
+.one-work-title::before {
+    /* 用自动计数编号 */
+    content: "0" counter(workNum) " /";
+    font-size: 0.3em;
+    margin-right: 20px;
+}
+
+/* 文字 标题 悬停隐藏 */
+.one-work-title:hover {
+    opacity: 0;
+}
+
+/* 文字 滚动字幕 */
+.move-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 5vw;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0;
+    white-space: nowrap;
+    transform: translateX(100%);
+    transition: opacity 0.1s;
+    animation: textMoving 10s linear infinite;
+    animation-play-state: paused;
+    z-index: -1;
+}
+
+/* 文字 滚动字幕 悬停滚动 */
+.one-work-title:hover+span {
+    opacity: 0.5;
+    animation-play-state: running;
+}
+
+/* 文字 滚动字幕 悬停滚动 帧动画 */
+@keyframes textMoving {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* 鼠标图片 */
+.circle-img {
+    width: 12vw;
+    height: 12vw;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.circle-img>img {
+    width: 150%;
+}

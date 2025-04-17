@@ -1,0 +1,54 @@
+/* 第三个板块 */
+.retro .contact-me-info-left-hover {
+    color: blue;
+}
+
+
+/* 
+—————— 小字 ——————
+*/
+/* 小字 左侧文字 下划线 */
+.retro .contact-me-info-left-hover::before {
+    width: 100%;
+    background-color: blue;
+    transition: none;
+}
+
+/* 小字 左侧文字 下划线 悬停效果 */
+.retro .contact-me-info-left-hover:hover::before {
+    width: 0;
+}
+
+/* 
+—————— 大字 ——————
+*/
+.retro .contact-me-talk {
+    text-transform: none;
+}
+
+/* 大字 右侧动图 */
+.retro .contact-me-talk::after {
+    width: 8vw;
+    height: 8vw;
+    bottom: 1.65vw;
+    right: 5px;
+    background-image: url('../../imgs/retro-contact-me-clippy.gif');
+}
+
+.retro .contact-me-talk:hover::after {
+    transform: none;
+}
+
+/* 大字 下划线 */
+.retro .contact-me-talk::before {
+    background-image: url('../../imgs/retro-contact-me-border.png');
+    background-color: transparent;
+    height: 10px;
+    transition: none;
+}
+
+/* 大字 下划线 悬停效果 */
+.retro .contact-me-talk:hover::before {
+    background-image: url('../../imgs/retro-contact-me-border.gif');
+    transform: none;
+}

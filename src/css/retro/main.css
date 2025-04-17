@@ -1,0 +1,36 @@
+/* 改背景颜色 */
+.retro {
+    background: linear-gradient(rgba(255, 0, 0, 0.5) 0%, rgba(255, 255, 0, 0.5) 15%, rgba(0, 255, 255, 0.5) 50%, rgba(0, 0, 255, 0.5) 65%, rgba(255, 0, 255, 0.5) 80%, rgba(255, 0, 0, 0.5) 100%);
+}
+
+/* 改字体 */
+@font-face {
+    font-family: 'simkai';
+    src: url('../../font/simkai.ttf');
+}
+
+body.retro {
+    font-family: 'simkai';
+}
+
+/* 隐藏鼠标外圈 */
+.retro canvas {
+    opacity: 0;
+}
+
+/* 改鼠标样式 */
+.retro .mousePoint {
+    background-image: url('../../imgs/retro-cursor.svg');
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 10px;
+    left: 12px;
+}
+
+/* 改鼠标悬停样式 */
+.retro .mousePoint.bigDot {
+    background-image: url('../../imgs/retro-cursor-hover.svg');
+}

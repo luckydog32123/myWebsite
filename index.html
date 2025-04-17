@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玛卡巴卡的第一个网站</title>
+    <!-- 网站图标 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 现代样式 -->
+    <link rel="stylesheet" href="src/css/modern.css">
+    <!-- 复古样式 -->
+    <link rel="stylesheet" href="src/css/retro.css">
+    <!-- 媒体查询样式 -->
+    <link rel="stylesheet" href="src/css/mediaQuery.css">
+</head>
+
+<body>
+    <!-- 页面加载覆盖页面 -->
+    <!-- 上层页面 -->
+    <div class="loading up">
+        <span>“你好😄，欢迎光临我的小站🎉”</span>
+    </div>
+    <!-- 下层页面 -->
+    <div class="loading down"></div>
+
+
+    <!-- 个性化鼠标样式 -->
+    <div class="mousePoint"></div>
+    <canvas id="myCanvas" resize></canvas>
+
+
+    <!-- 内容区域 -->
+    <div id="container" class="container">
+        <!-- 第一个板块 -->
+        <div class="who-am-i shows">
+            <!-- 第一部分 导航栏 -->
+            <div class="who-am-i-nav">
+                <!-- 左侧 标题 -->
+                <span class="who-am-i-nav-title">
+                    <span>我是谁？</span>
+                </span>
+
+                <!-- 右侧 图标 按钮 -->
+                <div class="who-am-i-nav-badge">
+                    <!-- 图标 -->
+                    <div data-bigdot="true" class="who-am-i-nav-badge-box">
+                        <img src="src/imgs/who-am-i-icon-circle.jpg" alt="">
+                        <img class="square-icon" src="src/imgs/who-am-i-icon.jpg" alt="">
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div data-bigdot="true" class="who-am-i-nav-badge-switch">
+                        <label>
+                            <input class="fakeCheckBox" type="checkbox">
+                            <div class="slider-bar"></div>
+                        </label>
+                        <div class="who-am-i-nav-badge-switch-text">
+                            <span class="switch-to-old">切换主题</span>
+                            <span class="no-more-old">No more old school</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- 第二部分 文字 -->
+            <div class="who-am-i-text">
+                <!-- 大字 -->
+                <div class="who-am-i-text-detail">
+                    <span>你好😄—</span>
+                    <span>我是玛卡巴卡,</span>
+                    <span>努力学习前端开发中🧐……</span>
+                </div>
+
+                <!-- 小字 -->
+                <a href="#about-me" data-bigdot="true" class="who-am-i-text-more">关于我</a>
+            </div>
+
+
+
+            <!-- 第三部分 图片 -->
+            <div class="who-am-i-imgs">
+                <!-- 图片 -->
+                <div class="who-am-i-imgs-box">
+                    <img src="src/imgs/who-am-i-img.jpg" alt="">
+                    <img src="src/imgs/who-am-i-img-2.jpg" alt="">
+                </div>
+
+                <!-- 右上角旋转图标 -->
+                <div data-bigdot="true" class="who-am-i-imgs-rotate">
+                    <img class="who-am-i-imgs-rotate-arrow" src="src/imgs/arrow.svg" alt="">
+                    <img class="who-am-i-imgs-rotate-circle" src="src/imgs/who-am-i-img-circle.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 第二个板块 -->
+        <div id="about-me" class="about-me">
+            <!-- 标题 -->
+            <span class="about-me-title shows">关于我 ：</span>
+
+            <!-- 内容 -->
+            <div class="works-container">
+                <!-- 第一个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">教育经历🏫</div>
+                        <span class="move-text">24年本科毕业于长春理工大学计算机专业，具备计算机知识和编程基础；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-1.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- 第二个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">前端技能👨‍💻</div>
+                        <span class="move-text">掌握HTML和CSS，熟悉JavaScript，了解jQuery，能独立制作静态网页；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-2.gif" alt="">
+                    </div>
+                </div>
+
+                <!-- 第三个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">英语能力🗣️</div>
+                        <span class="move-text">英语四级，具有良好的英语阅读和基础的沟通交流能力；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-3.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- 第四个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">办公软件📂</div>
+                        <span class="move-text">熟练使用各种办公软件，如excel的函数和数据透视图，可以帮助提升工作效率；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-4.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- 第五个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">学习能力📖</div>
+                        <span class="move-text">学习能力优异，能快速掌握新的知识和技能；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-5.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- 第六个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">抗压能力✊</div>
+                        <span class="move-text">抗压能力出色，能在高强度工作环境中保持效率；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-6.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- 第七个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">工作能力🏢</div>
+                        <span class="move-text">工作态度认真，踏实肯干，对待任务始终保持耐心仔细；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-7.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- 第八个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">合作能力🤝</div>
+                        <span class="move-text">具备优秀的团队合作精神，积极主动，责任心强，能与团队成员有效的沟通合作；</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-1.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- 第九个 -->
+                <div class="one-work shows">
+                    <!-- 文字 -->
+                    <div class="one-work-text-box">
+                        <div data-bigdot="true" class="one-work-title">其他技能⚙️</div>
+                        <span class="move-text">初出茅庐，学无止境，持续学习中……</span>
+                    </div>
+
+                    <!-- 鼠标图片 -->
+                    <div class="circle-img">
+                        <img src="src/imgs/about-me-img-2.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 第三个板块 -->
+        <div class="contact-me">
+            <!-- 标题 -->
+            <span class="contact-me-title shows">联系我 ：</span>
+
+            <!-- 小字 -->
+            <div class="contact-me-info shows">
+                <!-- 小字 左侧文字 -->
+                <div class="contact-me-info-left">
+                    <span>玛卡巴卡</span>
+                    <a href="mailto:1290762235@qq.com" data-bigdot="true"
+                        class="contact-me-info-left-hover">📨E-Mail：1290762235@qq.com</a>
+                    <a href="https://github.com/luckydog32123" target="_blank" data-bigdot="true"
+                        class="contact-me-info-left-hover">🔗GitHub：luckydog32123</a>
+                </div>
+
+                <!-- 小字 右侧文字 -->
+                <div class="contact-me-info-right">
+                    <span>想了解关于我的更多信息？🫣</span>
+                    <div class="contact-me-info-right-box">
+                        <span>这里有一个小短片📽️（但这并不是我的😝）</span>
+                        <span class="contact-me-info-right-icon"></span>
+                    </div>
+                    <video autoplay loop muted src="src/videos/contact-me-video.mp4"></video>
+                </div>
+            </div>
+
+            <!-- 大字 -->
+            <a href="#container" data-bigdot="true" class="contact-me-talk shows">回到顶部</a>
+        </div>
+    </div>
+
+
+    <script src="src/js/jQuery/jquery-3.7.1.min.js"></script>
+    <script src="src/js/Paperjs/paper-full.min.js"></script>
+    <script src="src/js/GSAP/gsap.min.js"></script>
+    <script src="src/js/myjs/main.js" type="module"></script>
+</body>
+
+</html>

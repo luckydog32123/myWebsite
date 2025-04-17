@@ -1,0 +1,259 @@
+/* 第一个板块 */
+.who-am-i {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 
+—————— 第一部分 导航栏 ——————
+*/
+.who-am-i-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 左侧文字 */
+.who-am-i-nav-title {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* 右侧 */
+.who-am-i-nav-badge {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* 右侧 图标 */
+.who-am-i-nav-badge-box {
+    display: flex;
+    position: relative;
+}
+
+.who-am-i-nav-badge-box>img {
+    height: 76px;
+}
+
+.who-am-i-nav-badge-box>img:first-child {
+    border-radius: 50%;
+}
+
+/* 右侧 图标 紫色图标隐藏 */
+.square-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 右侧 图标 紫色图标悬停显示 */
+.square-icon:hover {
+    opacity: 1;
+}
+
+/* 右侧 按钮 */
+.slider-bar {
+    height: 34px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 34px;
+    position: relative;
+    cursor: none;
+}
+
+/* 右侧 按钮 圆点 */
+.slider-bar::before {
+    content: "";
+    height: 26px;
+    width: 26px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    background-image: url('../../imgs/who-am-i-star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s ease;
+}
+
+.fakeCheckBox {
+    display: none;
+}
+
+
+/* 右侧 按钮 圆点 移动变形 */
+.fakeCheckBox:checked+.slider-bar::before {
+    transform: translateX(26px);
+    background-color: transparent;
+}
+
+/* 右侧 按钮 文字 */
+.who-am-i-nav-badge-switch {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.who-am-i-nav-badge-switch-text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-am-i-nav-badge-switch-text>span {
+    width: 62px;
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+}
+
+/* 右侧 按钮 文字隐藏 */
+.no-more-old {
+    visibility: hidden;
+}
+
+
+/* 
+—————— 第二部分 文字 ——————
+*/
+.who-am-i-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 大字 */
+.who-am-i-text-detail {
+    font-size: 7vw;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* 小字 */
+.who-am-i-text-more {
+    font-weight: 400;
+    position: relative;
+    width: fit-content;
+    padding-right: 15px;
+    overflow: hidden;
+    height: 24px;
+    margin-top: 20px;
+}
+
+/* 小字 下划线 */
+.who-am-i-text-more::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.3s;
+}
+
+/* 小字 下划线 悬停消失 */
+.who-am-i-text-more:hover:before {
+    transform: translateX(100%);
+}
+
+/* 小字 箭头 */
+.who-am-i-text-more::after {
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-image: url('../../imgs/arrow.svg');
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+
+
+/* 
+—————— 第三部分 图片 ——————
+*/
+.who-am-i-imgs {
+    position: relative;
+    width: fit-content;
+    margin-top: 85px;
+    width: 50%;
+    max-width: 1200px;
+}
+
+/* 图片 */
+.who-am-i-imgs-box {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-am-i-imgs-box>img {
+    width: 100%;
+    position: absolute;
+}
+
+.who-am-i-imgs-box>img:last-child {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+/* 图片 悬停显现第二张图片 */
+.who-am-i-imgs-box:hover>img:last-child {
+    opacity: 1;
+}
+
+/* 图片 右上角旋转图标 */
+.who-am-i-imgs-rotate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, -50%);
+}
+
+.who-am-i-imgs-rotate>img {
+    position: absolute;
+}
+
+/* 图片 右上角 箭头 */
+.who-am-i-imgs-rotate-arrow {
+    width: 17px;
+    transform: rotate(135deg);
+}
+
+/* 图片 右上角 旋转图标 */
+.who-am-i-imgs-rotate-circle {
+    animation: circleRotation 8s linear infinite;
+}
+
+/* 图片 右上角 旋转图标 帧动画 */
+@keyframes circleRotation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 图片 右上角 旋转图标 帧动画 悬停暂停 */
+.who-am-i-imgs-rotate-circle:hover {
+    animation-play-state: paused;
+}
