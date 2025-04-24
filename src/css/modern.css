@@ -1,16 +1,16 @@
 /* 现代样式 */
 
 /* 整体 */
-@import url('modern/main.css');
+@import url("modern/main.css");
 
 /* 加载页 */
-@import url('modern/loading.css');
+@import url("modern/loading.css");
 
 /* 第一个板块 */
-@import url('modern/who-am-i.css');
+@import url("modern/who-am-i.css");
 
 /* 第二个板块 */
-@import url('modern/about-me.css');
+@import url("modern/about-me.css");
 
 /* 第三个板块 */
-@import url('modern/contact-me.css');
+@import url("modern/contact-me.css");

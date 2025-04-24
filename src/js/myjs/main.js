@@ -1,20 +1,20 @@
 import loading from "./loading.js";
 import cursorEffect from "./cursorEffect.js";
-import aboutMe from "./aboutMe.js"
+import aboutMe from "./aboutMe.js";
 import contactMe from "./contactMe.js";
 import themeSwich from "./themeSwitch.js";
 
 // 页面加载效果
-loading()
+loading();
 
 // 个性化鼠标样式
-cursorEffect()
+cursorEffect();
 
 // 第二个板块 鼠标动效
-aboutMe()
+aboutMe();
 
 // 第三个板块 视频播放按钮切换
-contactMe()
+contactMe();
 
 // 切换主题
-themeSwich()
+themeSwich();

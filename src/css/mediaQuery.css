@@ -1,194 +1,189 @@
 /* 媒体查询 */
 
-
 /* 
 —————— 小屏笔记本 ——————
 */
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
+  /* 各板块标题大小 */
+  .who-am-i-nav-title,
+  .about-me-title,
+  .contact-me-title {
+    font-size: 1.3rem;
+  }
 
-    /* 各板块标题大小 */
-    .who-am-i-nav-title,
-    .about-me-title,
-    .contact-me-title {
-        font-size: 1.3rem;
-    }
+  /* 第一个板块 第二部分 文字 大字 —— 大小 */
+  .who-am-i-text-detail {
+    font-size: 3.8em;
+  }
 
-    /* 第一个板块 第二部分 文字 大字 —— 大小 */
-    .who-am-i-text-detail {
-        font-size: 3.8em;
-    }
+  /* 第二个板块 内容 文字 标题 —— 大小 */
+  .one-work-title {
+    font-size: 3em;
+  }
 
-    /* 第二个板块 内容 文字 标题 —— 大小 */
-    .one-work-title {
-        font-size: 3em;
-    }
+  /* 第三个板块 大字 —— 大小 */
+  .contact-me-talk {
+    font-size: 3.8em;
+  }
 
-    /* 第三个板块 大字 —— 大小 */
-    .contact-me-talk {
-        font-size: 3.8em;
-    }
-
-    /* 第三个板块 右侧箭头(现代)动图(复古) —— 大小 */
-    .contact-me-talk::after,
-    .retro .contact-me-talk::after {
-        width: 50px;
-        height: 50px;
-    }
+  /* 第三个板块 右侧箭头(现代)动图(复古) —— 大小 */
+  .contact-me-talk::after,
+  .retro .contact-me-talk::after {
+    width: 50px;
+    height: 50px;
+  }
 }
-
 
 /* 
 —————— 平板 ——————
 */
-@media (max-width:768px) {
+@media (max-width: 768px) {
+  html,
+  body {
+    cursor: auto;
+  }
 
-    html,
-    body {
-        cursor: auto;
-    }
+  /* 取消鼠标样式 */
+  .mousePoint,
+  canvas {
+    display: none;
+  }
 
-    /* 取消鼠标样式 */
-    .mousePoint,
-    canvas {
-        display: none;
-    }
+  /* 各板块标题大小 */
+  .who-am-i-nav-title,
+  .about-me-title,
+  .contact-me-title {
+    font-size: 0.9rem;
+  }
 
-    /* 各板块标题大小 */
-    .who-am-i-nav-title,
-    .about-me-title,
-    .contact-me-title {
-        font-size: 0.9rem;
-    }
+  /* 第一个板块 第一部分 导航栏 右侧 —— 缩放 位移 */
+  .who-am-i-nav-badge {
+    scale: 0.7;
+    transform: translateY(-20px);
+  }
 
-    /* 第一个板块 第一部分 导航栏 右侧 —— 缩放 位移 */
-    .who-am-i-nav-badge {
-        scale: 0.7;
-        transform: translateY(-20px);
-    }
+  /* 第一个板块 第一部分 导航栏 右侧 图标 紫色图标隐藏 —— 改为默认显示 取消hover效果 */
+  .square-icon {
+    opacity: 1;
+  }
 
-    /* 第一个板块 第一部分 导航栏 右侧 图标 紫色图标隐藏 —— 改为默认显示 取消hover效果 */
-    .square-icon {
-        opacity: 1;
-    }
+  /* 第一个板块 第二部分 文字 大字 大小 —— 行间距 */
+  .who-am-i-text-detail {
+    font-size: 3em;
+    line-height: 1.1;
+  }
 
-    /* 第一个板块 第二部分 文字 大字 大小 —— 行间距 */
-    .who-am-i-text-detail {
-        font-size: 3em;
-        line-height: 1.1;
-    }
+  /* 第一个板块 第二部分 文字 小字 下划线 悬停消失 —— 取消 */
+  .who-am-i-text-more:hover:before {
+    transform: none;
+  }
 
-    /* 第一个板块 第二部分 文字 小字 下划线 悬停消失 —— 取消 */
-    .who-am-i-text-more:hover:before {
-        transform: none;
-    }
+  /* 第一个板块 第三部分 图片 —— 大小 */
+  .who-am-i-imgs {
+    width: 100%;
+  }
 
-    /* 第一个板块 第三部分 图片 —— 大小 */
-    .who-am-i-imgs {
-        width: 100%;
-    }
+  /* 第一个板块 第三部分 图片 悬停显现第二张图片 —— 取消 */
+  .who-am-i-imgs-box:hover > img:last-child {
+    opacity: 0;
+  }
 
-    /* 第一个板块 第三部分 图片 悬停显现第二张图片 —— 取消 */
-    .who-am-i-imgs-box:hover>img:last-child {
-        opacity: 0;
-    }
+  /* 第一个板块 第三部分 图片 右上角旋转图标 —— 缩放 位移 */
+  .who-am-i-imgs-rotate {
+    scale: 0.8;
+    transform: none;
+  }
 
-    /* 第一个板块 第三部分 图片 右上角旋转图标 —— 缩放 位移 */
-    .who-am-i-imgs-rotate {
-        scale: 0.8;
-        transform: none;
-    }
+  /* 第一个板块 第三部分 图片 右上角 旋转图标 帧动画 悬停暂停 —— 取消 */
+  .who-am-i-imgs-rotate-circle:hover {
+    animation-play-state: running;
+  }
 
-    /* 第一个板块 第三部分 图片 右上角 旋转图标 帧动画 悬停暂停 —— 取消 */
-    .who-am-i-imgs-rotate-circle:hover {
-        animation-play-state: running;
-    }
+  /* 第二个板块 内容 文字 标题 —— 大小 */
+  .one-work-title {
+    font-size: 1.8em;
+  }
 
-    /* 第二个板块 内容 文字 标题 —— 大小 */
-    .one-work-title {
-        font-size: 1.8em;
-    }
+  /* 第二个板块 内容 文字 标题 悬停隐藏 —— 取消 */
+  .one-work-title:hover {
+    opacity: 1;
+  }
 
-    /* 第二个板块 内容 文字 标题 悬停隐藏 —— 取消 */
-    .one-work-title:hover {
-        opacity: 1;
-    }
+  /* 第二个板块 内容 文字 滚动字幕 悬停滚动 —— 取消 */
+  .one-work-title:hover + span {
+    opacity: 0;
+    animation-play-state: paused;
+  }
 
-    /* 第二个板块 内容 文字 滚动字幕 悬停滚动 —— 取消 */
-    .one-work-title:hover+span {
-        opacity: 0;
-        animation-play-state: paused;
-    }
+  /* 第三个板块 小字 —— 布局 */
+  .contact-me-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    /* 第三个板块 小字 —— 布局 */
-    .contact-me-info {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  /* 第三个板块 小字 左侧文字 下划线 悬停效果 —— 取消 */
+  .contact-me-info-left-hover::before,
+  .retro .contact-me-info-left-hover:hover::before {
+    width: 100%;
+  }
 
-    /* 第三个板块 小字 左侧文字 下划线 悬停效果 —— 取消 */
-    .contact-me-info-left-hover::before,
-    .retro .contact-me-info-left-hover:hover::before {
-        width: 100%;
-    }
+  /* 第三个板块 小字 右侧文字 —— 布局 位移 */
+  .contact-me-info-right {
+    align-items: flex-start;
+    margin-top: 40px;
+  }
 
-    /* 第三个板块 小字 右侧文字 —— 布局 位移 */
-    .contact-me-info-right {
-        align-items: flex-start;
-        margin-top: 40px;
-    }
+  /* 第三个板块 小字 右侧文字 视频 悬停效果 —— 取消 */
+  .contact-me-info-right-box:hover + video {
+    visibility: hidden;
+  }
 
-    /* 第三个板块 小字 右侧文字 视频 悬停效果 —— 取消 */
-    .contact-me-info-right-box:hover+video {
-        visibility: hidden;
-    }
+  /* 第三个板块 大字 —— 大小 */
+  .contact-me-talk {
+    font-size: 3em;
+  }
 
-    /* 第三个板块 大字 —— 大小 */
-    .contact-me-talk {
-        font-size: 3em;
-    }
+  /* 第三个板块 大字 右侧箭头(现代)动图(复古) —— 大小 */
+  .contact-me-talk::after,
+  .retro .contact-me-talk::after {
+    width: 40px;
+    height: 40px;
+  }
 
-    /* 第三个板块 大字 右侧箭头(现代)动图(复古) —— 大小 */
-    .contact-me-talk::after,
-    .retro .contact-me-talk::after {
-        width: 40px;
-        height: 40px;
-    }
+  /* 第三个板块 大字 右侧箭头 悬停效果 —— 取消 */
+  .contact-me-talk:hover::after {
+    transform: none;
+  }
 
-    /* 第三个板块 大字 右侧箭头 悬停效果 —— 取消 */
-    .contact-me-talk:hover::after {
-        transform: none;
-    }
-
-    /* 第三个板块 大字 下划线 悬停效果 —— 取消 */
-    .contact-me-talk:hover::before {
-        transform: none;
-    }
+  /* 第三个板块 大字 下划线 悬停效果 —— 取消 */
+  .contact-me-talk:hover::before {
+    transform: none;
+  }
 }
 
 /* 
 —————— 手机 ——————
 */
-@media (max-width:425px) {
+@media (max-width: 425px) {
+  /* 第一个板块 第一部分 导航栏 右侧 —— 缩放 位移 */
+  .who-am-i-nav-badge {
+    scale: 0.5;
+    transform: translateY(-40px);
+  }
 
-    /* 第一个板块 第一部分 导航栏 右侧 —— 缩放 位移 */
-    .who-am-i-nav-badge {
-        scale: 0.5;
-        transform: translateY(-40px);
-    }
+  /* 第一个板块 第三部分 图片 位移 —— 取消 */
+  .who-am-i-imgs-box > img {
+    transform: none;
+  }
 
-    /* 第一个板块 第三部分 图片 位移 —— 取消 */
-    .who-am-i-imgs-box>img {
-        transform: none;
-    }
+  /* 第一个板块 第三部分 图片 右上角旋转图标 —— 缩放 位移 */
+  .who-am-i-imgs-rotate {
+    scale: 0.5;
+    transform: translate(40%, -40%);
+  }
 
-    /* 第一个板块 第三部分 图片 右上角旋转图标 —— 缩放 位移 */
-    .who-am-i-imgs-rotate {
-        scale: 0.5;
-        transform: translate(40%, -40%);
-    }
-
-    /* 第二个板块 内容 文字 标题 —— 大小 */
-    .one-work-title {
-        font-size: 1.5em;
-    }
+  /* 第二个板块 内容 文字 标题 —— 大小 */
+  .one-work-title {
+    font-size: 1.5em;
+  }
 }
